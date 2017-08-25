@@ -36,6 +36,20 @@ public class Graph <T>{
         return matrixOfEdges.get(vertex);
     }
 
+    public List<Integer> getNeighbours(Vertex vertex) {
+        int index = -1;
+        for(int i = 0; i < vertexList.size(); i++)
+            if(vertex.equals(vertexList.get(i))) {
+                index = i;
+                break;
+            }
+        if (index == -1)
+            return null;
+        else {
+            return matrixOfEdges.get(index);
+        }
+    }
+
     public int getSize() {
         return vertexList.size();
     }
