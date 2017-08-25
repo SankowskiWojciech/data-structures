@@ -24,6 +24,22 @@ public class Graph <T>{
         matrixOfEdges.get(start).add(end);
     }
 
+    public List<Vertex<T>> getVertexList() {
+        return vertexList;
+    }
+
+    public List<List<Integer>> getMatrixOfEdges() {
+        return matrixOfEdges;
+    }
+
+    public List<Integer> getNeighbours(int vertex) {
+        return matrixOfEdges.get(vertex);
+    }
+
+    public int getSize() {
+        return vertexList.size();
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
